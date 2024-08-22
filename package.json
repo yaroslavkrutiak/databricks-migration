@@ -12,6 +12,7 @@
     "databricks-migration": "lib/index.js"
   },
   "main": "lib/index.js",
+  "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
@@ -28,7 +29,8 @@
   "scripts": {
     "lint": "eslint --fix 'src/**/*.ts'",
     "prebuild": "rimraf lib",
-    "build": "tsup src/index.ts --format cjs,esm --dts -d lib"
+    "build": "tsup src/index.ts --format cjs,esm --dts -d lib",
+    "release": "npm run build && changeset publish"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
