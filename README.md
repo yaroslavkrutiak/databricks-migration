@@ -38,9 +38,9 @@ databricks-migration <command> [options]
 - `-p, --path`: Defines the path to your Databricks workspace directory. (Optional)
 - `-t, --token`: Provides your Databricks workspace access token. (Optional)
 - `-c, --catalog`: Sets the catalog for your Databricks workspace. (Optional)
-- `-s, --schema`: Defines the schema within your Databricks workspace for migrations. (Optional)
+- `-s, --schema`: Defines the schema within your Databricks workspace for migrations. Created if not exists. (Optional)
 - `-e, --env`: Sets the path to an environment file containing Databricks connection details. Defaults to `.env` in the current working directory. Supports environment variable expansion.
-- `--noEnvFile`: Disables loading environment variables from .env or other specified options. If this flag is set, the tool will rely solely on environment variables set in your shell for Databricks connection details.
+- `--noEnvFile`: Disables loading environment variables from `.env` or other specified options **if no `-h, --host`, `-p, --path`, `-s, --schema`, `-c, --catalog`, or `-t, --token` options are provided**. If this flag is set, the tool will rely solely on environment variables set in your shell for Databricks connection details.
 - `-h, --help`: Displays the usage information and available options.
 
 **Configuration:**
