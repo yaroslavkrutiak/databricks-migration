@@ -1,6 +1,6 @@
 import { ReadLine } from 'readline';
 
-// readline/promises is not available in Node.js v14
+// readline/promises is not available in Node.js v14 and tsup has some problems with it
 export const promptAndWaitForAnswer = async ({
   rl,
   question,
